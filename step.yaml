@@ -1,0 +1,41 @@
+{
+  "Comment": "Step Function to route requests to the appropriate Lambda function based on input and action",
+  "StartAt": "CheckEncryption",
+  "States": {
+    "CheckEncryption": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.action",
+          "StringEquals": "sha256",
+          "Next": "SHA256--A3"
+        },
+        {
+          "Variable": "$.action",
+          "StringEquals": "md5",
+          "Next": "MD5--A3"
+        },
+        {
+          "Variable": "$.action",
+          "StringEquals": "bcrypt",
+          "Next": "BCrypt--A3"
+        }
+      ]
+    },
+    "SHA256--A3": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:637592602151:function:SHA_FUNCTION:$LATEST",
+      "End": true
+    },
+    "MD5--A3": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:637592602151:function:MD5_FUCNTION:$LATEST",
+      "End": true
+    },
+    "BCrypt--A3": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:637592602151:function:a3:$LATEST",
+      "End": true
+    }
+  }
+}
