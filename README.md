@@ -19,6 +19,9 @@ I have built REST API entry points using AWS serverless compute mechanisms. The 
 4. Create and configure Lambda functions for state transitions and hashing.
 5. Set up API Gateway to handle RESTful endpoints.
 
+![image](https://github.com/AlagappanVeerappan32/-Serverless-Project-with-AWS/assets/133504573/70395771-d0ea-47db-b837-f5083792b072)
+
+
 ### Usage
 - Provide the appropriate endpoint URLs for communication with my app.
 - Ensure that your State Machine, Lambda functions, and API Gateway are properly configured.
