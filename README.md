@@ -13,7 +13,7 @@ This repository contains my individual assignment that demonstrates proficiency 
 I have built REST API entry points using AWS serverless compute mechanisms. The application utilizes a State Machine, configured with API Gateway, to evaluate choices based on input and invoke Lambda functions to perform hashing operations on provided input data.
 
 ### Installation
-1. Clone this repository: `git clone <repository_url>`
+1. Clone this repository
 2. Configure your AWS credentials: Follow [AWS CLI Configuration](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html).
 3. Set up your State Machine using Step Functions.
 4. Create and configure Lambda functions for state transitions and hashing.
